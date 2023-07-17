@@ -39,7 +39,7 @@ const createPokemonCard = (poke) => {
   card.classList.add("pokemon");
 
   const name = poke.name[0].toUpperCase() + poke.name.slice(1);
-  const id = poke.id.toString().padStart(3, "0");
+  const id = poke.id.toString().padStart(1);
 
   const pokeTypes = poke.types.map((type) => type.type.name);
   const type = mainTypes.find((type) => pokeTypes.indexOf(type) > -1);
@@ -64,3 +64,4 @@ const createPokemonCard = (poke) => {
 };
 
 fetchPokemons();
+
